@@ -108,7 +108,6 @@ void app_main(){
       printf("rConf/Hz\trMeas_Hz\tratio\tnOvf\n");
     printf("%1.3f\t%1.3f\t%1.5f\t%lu\n", convRate_Hz, rate_SPS, rate_SPS/convRate_Hz, nOverflow);
   } // for convRate
-  ESP_ERROR_CHECK(adc_continuous_stop(adcHandle));
   ESP_ERROR_CHECK(adc_continuous_deinit(adcHandle));
 
   while (1){
